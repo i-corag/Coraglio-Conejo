@@ -24,5 +24,4 @@ Color palette:
 - DB6400
 
 Logo ideas:  
-![logo image](cd/Users/ivanacoraglio/Desktop/Fullstack/forlogo.jpg)  
-
+![forLogo](forlogo.jpg)
