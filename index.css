@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral+SC:wght@200;300;400&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-clip: border-box;
+}
+
+
+:root {
+    --first-color: #F9F6E7;
+    --second-color: #96c7c1;
+    --third-color: #df7861;
+    --fourth-color: #5d4b40;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+body {
+    width: calc ( 100vw - (100vw - 100%));
+    font-family: 'Lato';
+}
+
+
+
+
+
+/* TABLET */
+@media (min-width: 768px) {
+
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+}
