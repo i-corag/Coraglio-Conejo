@@ -51,7 +51,7 @@ header nav {
     cursor: pointer;
 }
 
-.header-logo {
+.header-navbar-logo {
     height: 4em;
     width: 4em;
     display: flex;
@@ -98,7 +98,7 @@ header nav {
         font-size: .8em;
     }
 
-    .header-logo {
+    .header-navbar-logo {
         height: 6em;
         width: 6em;
     }
