@@ -1,5 +1,6 @@
 footer {
     width: 100%;
+    padding: 1em;
     position: absolute;
     bottom: 0;
     background-color: var(--first-color);
@@ -8,28 +9,19 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
 .footer-navbar{
     display:none;
 }
-
-.footer-media-newsletter-terms , .footer-media , .footer-newsletter {
+.footer-newsletterbox , .footer-media , .footer-newsletter {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.footer-media {
-    margin: .5em 0em 1.5em 0em;
-}
-
 .footer-media p {
     padding: .25em .25em;
     color: var(--second-color);
-    
 }
-
 .footer-icon {
     padding: .25em .25em;
     background-color: var(--first-color);
@@ -38,24 +30,23 @@ footer {
     text-decoration: none;
     font-size: 1.2em;
 }
-
 .footer-icon:hover {
     color: var(--third-color);
     opacity: .8;
     cursor: pointer;
+} 
+.footer-newsletterbox {
+    margin: 1.5em 0;
 }
-
 .footer-newsletter label {
     text-transform:uppercase;
     color: var(--third-color);
     font-family: 'Spectral+SC';
     font-size: 1.2em;
 }
-
 .footer-newsletter div {
     display: flex;
 }
-
 button {
     border: .1em solid var(--third-color);
     background-color: var(--third-color);
@@ -63,14 +54,12 @@ button {
     text-transform:uppercase;
     padding: .5em .5em;    
 }
-
 input {
     padding: .5em .5em;  
     border: .1em solid var(--third-color);
     outline: none;
     border-color: var(--third-color);
 }
-
 .terms {
     color: var(--fourth-color);
     font-size: x-small;
@@ -79,17 +68,53 @@ input {
     text-decoration: none;
     color: var(--fourth-color);
     font-weight: bolder;
-    
 }
-
 .footer-copyrigths {
-    margin: 1.5em 0em 1em 0em;
     color: var(--fourth-color);
     font-size: small;
 }
 
 /* TABLET */
-@media (min-width: 768px){}
+@media (min-width: 768px){
+    .footer-contenido {
+        width: 100%;
+        display: flex;
+        gap:8em;
+        align-items: center;
+    }
+    .footer-navbar , .footer-media , .footer-newsletterbox {
+        width: 30%;
+    }
+    .footer-navbar{
+        margin-left: .5em;
+        display: flex;
+        flex-direction: column;
+        }
+    .footer-a {
+        padding: .3em;
+        text-decoration: none;
+        color: var(--fourth-color);
+        font-size: medium;
+        font-weight:500;
+    }
+    .footer-a:hover {
+        color: var(--third-color);
+        opacity: .8;
+        cursor: pointer;
+    }
+    .footer-media{
+        font-size: x-large;
+    }
+    .footer-newsletter label {
+        padding: 0.3em;
+        font-size: 1.4em;
+    }
+    .terms {
+        color: var(--fourth-color);
+        font-size: x-small;
+        padding: .6em;
+    }
+}
 
 /* DESKTOP */
 @media (min-width: 1200px) {}

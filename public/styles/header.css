@@ -50,6 +50,11 @@ header nav {
     cursor: pointer;
 }
 
+.header-a:active {
+    color: var(--third-color);
+    opacity: .8;
+}
+
 .header-navbar-logo {
     height: 4em;
     width: 4em;
