@@ -1,7 +1,7 @@
 footer {
     width: 100%;
     padding: 1em;
-    position: absolute;
+    position:relative;
     bottom: 0;
     background-color: var(--first-color);
     display: flex;
@@ -20,7 +20,9 @@ footer {
 }
 .footer-media p {
     padding: .25em .25em;
+    text-align: center;
     color: var(--second-color);
+    font-size: small;
 }
 .footer-icon {
     padding: .25em .25em;
@@ -104,6 +106,9 @@ input {
     }
     .footer-media{
         font-size: x-large;
+    }
+    .footer-media p {
+        font-size: large;
     }
     .footer-newsletter label {
         padding: 0.3em;

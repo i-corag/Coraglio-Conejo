@@ -1,3 +1,113 @@
 main {
-    height: 40vh;
+    margin: 0.5em;
 }
+.section {
+    margin: 0.5em;
+    display: flex;
+    gap:0.3em;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenedor {
+    margin:0.3em;
+    width: 45%;
+    height:13em;   
+}
+.contenedor-a {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.contenedor-a a {
+    padding: .1em;
+    text-decoration: none;
+    color: var(--first-color);
+    font-size: small;
+}
+#Mas-leidos , #Recomendados , #Ofertas , #Intercambia {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+#Mas-leidos {
+    background-image: url("https://images.pexels.com/photos/6344089/pexels-photo-6344089.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+}
+#Recomendados {
+    background-image: url("https://images.pexels.com/photos/4865742/pexels-photo-4865742.jpeg?auto=compress&cs=tinysrgb&w=1200");
+}
+#Ofertas {
+    background-image: url("https://images.pexels.com/photos/3747535/pexels-photo-3747535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+#Intercambia {
+    background-image: url("https://images.pexels.com/photos/4865741/pexels-photo-4865741.jpeg?auto=compress&cs=tinysrgb&w=1200");
+}
+#Intercambia p , #Ofertas p{
+    display: none;
+}
+
+
+/* TABLET */
+@media (min-width: 768px){
+    .section {
+        flex-direction: column;
+    }
+    .contenedor {
+        width: 60%;
+        height:10em;  
+        border: .1em solid var(--second-color);
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenedor-a {
+        width: 50%;
+        height: 100%;
+        font-family: 'Spectral+SC';
+        font-style: normal;
+        align-items: center;
+    }
+    .contenedor-a a {
+        color: var(--third-color);
+        font-size: x-large;
+    }
+    #Mas-leidos , #Recomendados , #Ofertas , #Intercambia {
+        background-image: none;
+        background-color: var(--first-color);
+    }
+    #Mas-leidos-imagen , #Recomendados-imagen , #Ofertas-imagen , #Intercambia-imagen {
+        width: 50%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    #Mas-leidos-imagen {
+        background-image: url("https://images.pexels.com/photos/6344089/pexels-photo-6344089.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    }
+    #Recomendados-imagen {
+        background-image: url("https://images.pexels.com/photos/4865742/pexels-photo-4865742.jpeg?auto=compress&cs=tinysrgb&w=1200");
+    }
+    #Ofertas-imagen {
+        background-image: url("https://images.pexels.com/photos/3747535/pexels-photo-3747535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    }
+    #Intercambia-imagen{
+        background-image: url("https://images.pexels.com/photos/4865741/pexels-photo-4865741.jpeg?auto=compress&cs=tinysrgb&w=1200");
+    }
+
+    #Intercambia {
+        flex-direction: column;
+        justify-content: center;
+       
+    }
+    #Intercambia p {
+        margin-left: 1em;
+        display:flex;
+        font-style:normal;
+    }
+    
+
+}
+
+   
+
+
