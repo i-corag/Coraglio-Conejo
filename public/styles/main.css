@@ -2,13 +2,68 @@ main {
     margin: 0.5em;
 }
 .section {
-    margin: 0.5em;
+    margin: 1.5em .5em;
     display: flex;
     gap:0.3em;
     justify-content:center;
     align-items: center;
     flex-wrap: wrap;
 }
+#Productos{
+    flex-direction: column;
+}
+#Productos h2 {
+    color: var(--second-color);
+    font-family: 'Spectral+SC';
+    font-size: x-large;
+    text-transform: uppercase;  
+}
+#Productos ul {
+    margin:.5em;
+    list-style: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:.5em;
+}
+#Productos ul li {
+    width: 50%;
+    height: 16em;
+    padding: .5em;
+    border: .1em solid var(--second-color);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+}
+#Productos img {
+    height: 10em;
+}
+#Productos ul li h3 {
+    text-align: center;
+    padding: .5em;
+    text-transform: uppercase; 
+    font-size: small;
+    font-weight: normal; 
+    color: var(--fourth-color);  
+}
+#Productos ul li a {
+    padding: .3em .7em;
+    background-color: var(--second-color);
+    font-size: small;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: var(--first-color);
+}
+#Productos ul li:nth-child(n+3){
+    display: none;  
+}
+
+
+
+
+
+
 .contenedor {
     margin:0.3em;
     width: 45%;
@@ -53,6 +108,12 @@ main {
     .section {
         flex-direction: column;
     }
+    #Productos ul li:nth-child(n){
+        display: flex;  
+    }
+
+
+
     .contenedor {
         width: 60%;
         height:10em;  
@@ -94,15 +155,18 @@ main {
         background-image: url("https://images.pexels.com/photos/4865741/pexels-photo-4865741.jpeg?auto=compress&cs=tinysrgb&w=1200");
     }
 
-    #Intercambia {
+    #Intercambia , #Ofertas {
         flex-direction: column;
         justify-content: center;
        
     }
-    #Intercambia p {
+    #Intercambia p , #Ofertas p {
         margin-left: 1em;
         display:flex;
         font-style:normal;
+        font-style: italic;
+        font-size: large;
+        color: var(--third-color);
     }
     
 
