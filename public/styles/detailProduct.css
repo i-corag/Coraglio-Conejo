@@ -1,6 +1,6 @@
 
 main {
-    margin: 0.5em;
+    margin: .5em;
 }
 .detalle-producto {
     margin: 2em .5em;
@@ -18,16 +18,18 @@ main {
     height: 20em;
 }
 .producto-titulo h2 {
-    font-family: "Spectral SC";
     color: var(--third-color);
     line-height: 1.2;
-    font-weight: lighter;
+    font-weight: medium;
 }
 .producto-titulo h3 {
     padding: .5em;
     color: var(--third-color);
     line-height: 1.2;
-    font-weight: bold;
+    font-weight:lighter;
+}
+.producto-titulo p , .producto-titulo a {
+    display:none;
 }
 .producto-titulo img{
     height: 13em;
@@ -37,6 +39,13 @@ main {
     text-align: center;
     line-height: 1.5;
     color: var(--fourth-color);
+}
+.producto-sinopsis a {
+    color: var(--fourth-color);
+    font-weight: bold;
+}
+.producto-sinopsis img{
+    display: none;
 }
 .producto-carrito {
     width: 90%;
@@ -85,25 +94,71 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* TABLET */
-@media (min-width: 768px){}
+@media (min-width: 768px){
+    main {
+        margin:1em;
+    }
+
+    .detalle-producto {
+        margin: .5em 2em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-between;
+        gap:.5em;
+    }
+
+    .producto-titulo , .producto-sinopsis , .producto-carrito{
+        width: 30%;
+        height: 30em;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+    }
+
+    .detalle-producto img , .detalle-producto a{
+        display: none;
+    }
+    .detalle-producto p {
+        padding: .5em;
+        display: flex;
+        text-align: center;
+        color: var(--fourth-color);
+        line-height: 1.5;
+    }
+    .producto-titulo a {
+        display: flex;
+        color: var(--fourth-color);
+        font-weight: bold;
+    }
+    .producto-sinopsis img {
+        display: flex;
+        height: 70%;
+    }
+    .producto-sinopsis p {
+        display: none;
+    }
+    .agregar {
+        width: 60%;
+        transition: 300ms;
+    }
+    .agregar:hover {
+        transform: scale(1.05);
+    }
+    .agregar p {
+        color: var(--first-color);
+    }
+    .checkbox label {
+        transition: 300ms;
+    }
+    .checkbox label:hover {
+        transform: scale(1.05);
+    }
+   
+}
 
 
 /* DESKTOP */
