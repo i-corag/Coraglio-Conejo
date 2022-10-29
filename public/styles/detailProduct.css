@@ -1,0 +1,110 @@
+
+main {
+    margin: 0.5em;
+}
+.detalle-producto {
+    margin: 2em .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.producto-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+    height: 20em;
+}
+.producto-titulo h2 {
+    font-family: "Spectral SC";
+    color: var(--third-color);
+    line-height: 1.2;
+    font-weight: lighter;
+}
+.producto-titulo h3 {
+    padding: .5em;
+    color: var(--third-color);
+    line-height: 1.2;
+    font-weight: bold;
+}
+.producto-titulo img{
+    height: 13em;
+}
+.producto-sinopsis {
+    padding: .5em;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--fourth-color);
+}
+.producto-carrito {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.select {
+    display:flex;
+    justify-content: space-between;
+    gap:2em;
+}
+.checkbox form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;  
+}
+.checkbox input {
+    visibility: hidden;
+}
+.checkbox label {
+    padding: .6em;
+    border: .1em solid var(--third-color);
+    border-radius:20px; 
+    color: var(--third-color);
+}
+.checkbox input:checked + label { 
+    color: var(--first-color);
+    border: .1em solid var(--third-color);
+    background-color: var(--third-color);
+}
+
+.agregar {
+    margin: 1em;
+    padding: .4em;
+    width: 50%;
+    border: .1em solid var(--second-color);
+    background-color: var(--second-color);
+    border-radius: 15px;
+    color: var(--first-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLET */
+@media (min-width: 768px){}
+
+
+/* DESKTOP */
+@media (min-width: 1200px){}
