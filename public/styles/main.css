@@ -16,6 +16,10 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: var(--third-color);
+    transition: 300ms;
+}
+#Banner:hover {
+    transform: scale(1.05);
 }
 
 #Banner-imagen {
@@ -65,6 +69,10 @@ main {
     flex-direction: column;
     justify-content:space-between;
     align-items:center;
+    transition: 300ms;
+}
+#Productos ul li:hover {
+    transform: scale(1.05);
 }
 #Productos img {
     height: 10em;
@@ -91,7 +99,11 @@ main {
 .contenedor {
     margin:0.3em;
     width: 45%;
-    height:13em;   
+    height:13em;
+    transition: 300ms;   
+}
+.contenedor:hover {
+    transform: scale(1.05);
 }
 .contenedor-a {
     display: flex;
@@ -125,7 +137,6 @@ main {
 #Intercambia p , #Ofertas p{
     display: none;
 }
-
 
 /* TABLET */
 @media (min-width: 768px){
@@ -189,18 +200,15 @@ main {
         background-image: url("https://images.pexels.com/photos/4865741/pexels-photo-4865741.jpeg?auto=compress&cs=tinysrgb&w=1200");
     }
 
-    #Intercambia , #Ofertas {
+    #Intercambia , #Ofertas{
         flex-direction: column;
         justify-content: center;
        
     }
-    #Intercambia p , #Ofertas p {
+    #Intercambia p , #Ofertas p{
         margin-left: 1em;
         display:flex;
         font-style:normal;
-        font-style: italic;
-        font-size: large;
-        color: var(--third-color);
     }
 }
 
