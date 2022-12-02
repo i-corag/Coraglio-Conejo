@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conejo bookstore detalle producto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral+SC:wght@200;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/974a6748c3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/index.css" />
+    <link rel="stylesheet" href="../../../css/detailProduct.css" />
+    <link rel="stylesheet" href="../../../css/footer.css" />
+</head>
+
+
+<body>
+
+    <%- include ('../partials/header.ejs') %>
+
+    <main>
+        <section class="detalle-producto">
+            <div class="producto-titulo">
+                <h2><%= product.titulo %></h2>
+                <h3><%= product.autor %></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi ipsum dicta perspiciatis ducimus, velit voluptas dignissimos perferendis error accusamus molestias autem dolorem saepe. Illum?</p>
+                <a href="ver mas">ver más</a>
+                <img src="../assets/libros/1.jpeg" alt="feminismo para principiantes"/>
+            </div>
+            <div class="producto-sinopsis">
+                <img src="../assets/libros/1.jpeg" alt="feminismo para principiantes"/>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi ipsum dicta perspiciatis ducimus, velit voluptas dignissimos perferendis error accusamus molestias autem dolorem saepe. Illum?</p>
+                <a href="ver mas">ver más</a>
+            </div>
+
+            <div class="producto-carrito">
+                <div class="select">
+                    <div class="checkbox">
+                        <form>
+                        <input type="checkbox" id="book" name="book" />
+                        <label for="book">Book<br>$3800</label>
+                        </form>
+                    </div>
+                    <div class="checkbox">
+                        <form>
+                        <input type="checkbox" id="ebook" name="ebook" />
+                        <label for="ebook">Ebook<br>$3500</label>
+                        </form>
+                    </div>
+                </div>
+                <div class="agregar">
+                    <p>Agregar</p>
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div> 
+            </div>
+        </section>
+
+    </main>
+
+    <%- include ('../partials/footer.ejs') %>
+
+
+</body>
+</html>

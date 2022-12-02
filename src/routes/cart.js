@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const path = require ("path");
+
 
 
 router.get ("/", (req,res) => {
-    res.send ("Estoy en el carrito de compras");
+    return res.status(200).render("pages/cart.ejs");
 });
 
 module.exports = router;

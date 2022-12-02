@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conejo bookstore detalle producto</title>
+    <title>Conejo Bookstore</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Spectral+SC:wght@200;300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/974a6748c3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/detailProduct.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../../../css/index.css" />
+    <link rel="stylesheet" href="../../../css/header.css" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <link rel="stylesheet" href="../../../css/footer.css" />
 </head>
 
 
@@ -48,47 +47,69 @@
     </header>
 
     <main>
-        <section class="detalle-producto">
-            <div class="producto-titulo">
-                <h2>Feminismo para Principiantes</h2>
-                <h3>Nuria Varela</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi ipsum dicta perspiciatis ducimus, velit voluptas dignissimos perferendis error accusamus molestias autem dolorem saepe. Illum?</p>
-                <a href="ver mas">ver más</a>
-                <img src="../assets/libros/1.jpeg" alt="feminismo para principiantes"/>
-            </div>
-            <div class="producto-sinopsis">
-                <img src="../assets/libros/1.jpeg" alt="feminismo para principiantes"/>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi ipsum dicta perspiciatis ducimus, velit voluptas dignissimos perferendis error accusamus molestias autem dolorem saepe. Illum?</p>
-                <a href="ver mas">ver más</a>
-            </div>
 
-            <div class="producto-carrito">
-                <div class="select">
-                    <div class="checkbox">
-                        <form>
-                        <input type="checkbox" id="book" name="book" />
-                        <label for="book">Book<br>$3800</label>
-                        </form>
-                    </div>
-                    <div class="checkbox">
-                        <form>
-                        <input type="checkbox" id="ebook" name="ebook" />
-                        <label for="ebook">Ebook<br>$3500</label>
-                        </form>
-                    </div>
+        <section class="section" id="Banner">
+            <div id="Banner-texto">
+                <a href="Registrate"><p>Nuestros socios tienen beneficios. Registrate GRATIS y DISFRUTA!</p></a>
+            </div>
+            <div id="Banner-imagen"></div>
+        </section>
+        <section class="section" id="Productos">
+            <h1>Novedades</h1>
+            <ul>
+                <li>
+                    <img src="../assets/libros/1.jpeg"/>
+                    <h3>Feminismo Para Principiantes</h3>
+                    <a href="ver"> VER </a>
+                </li>
+                <li>
+                    <img src="../assets/libros/2.jpeg"/>
+                    <h3>El Chico de las Estrellas</h3>
+                    <a href="ver"> VER </a>
+                </li>
+                <li>
+                    <img src="../assets/libros/3.jpeg"/>
+                    <h3>Ecologismo Real</h3>
+                    <a href="ver"> VER </a>
+                </li>
+                <li>
+                    <img src="../assets/libros/4.jpeg"/>
+                    <h3>Puta Madre</h3>
+                    <a href="ver"> VER </a>
+                </li>
+                <li>
+                    <img src="../assets/libros/5.jpeg"/>
+                    <h3>Los hombres me explican cosas</h3>
+                    <a href="ver"> VER </a>
+                </li>
+            </ul>
+        </section>
+        <section class="section">
+            <div class="contenedor" >
+                <div class="contenedor-a" id="Mas-leidos"><a href="Mas leidos"><h2>Más leídos</h2></a></div>
+                <div id="Mas-leidos-imagen"></div>
+            </div>
+            <div class="contenedor">
+                <div class="contenedor-a" id="Recomendados"><a href="Recomendados"><h2>Recomendados</h2></a></div>
+                <div id="Recomendados-imagen"><a href="Recomendados"></a></div>
+            </div>
+            <div class="contenedor">
+                <div class="contenedor-a" id="Ofertas">
+                    <a href="Ofertas"><h2>Sale!</h2></a>
+                    <p>No te pierdas las descuentos de este mes</p>
                 </div>
-                <div class="agregar">
-                    <p>Agregar</p>
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div> 
+                <div id="Ofertas-imagen"><a href="Ofertas"></a></div>
+            </div>
+            <div class="contenedor">
+                <div class="contenedor-a" id="Intercambia">
+                    <a href="Intercambia"><h2>Trueque</h2></a>
+                    <p>vení a intercambiar esos libros que ya no quieras...</p>
+                </div>
+                <div id="Intercambia-imagen"><a href="Intercambia"></a></div>
             </div>
         </section>
 
     </main>
-
-
-
-
 
     <footer>
         <div class="footer-contenido">
@@ -128,6 +149,7 @@
             <p>Copyrigths 2022</p>
         </div>       
     </footer>
-    
+
+
 </body>
 </html>

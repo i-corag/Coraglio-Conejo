@@ -3,6 +3,9 @@ require("dotenv").config();
 const express = require("express"); 
 const app = express(); 
 
+app.use(express.static(path.join(__dirname, "../public")));
+app.set("view engine", "ejs");
+
 const homeRoutes = require('./routes/home.js'); 
 const productRoutes = require('./routes/product.js'); 
 const loginRoutes = require('./routes/login.js'); 

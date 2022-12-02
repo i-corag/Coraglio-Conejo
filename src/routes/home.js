@@ -1,11 +1,12 @@
 
 const express = require('express');
 const router = express.Router();
-const path = require ("path");
+
+
 
 
 router.get ("/", (req,res) => {
-    res.send ("Estoy en Home");
+    return res.status(200).render("pages/home.ejs");
 });
 
 module.exports = router;
