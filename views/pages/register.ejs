@@ -18,7 +18,74 @@
 
     <%- include ('../partials/header.ejs') %>
 
-    <main></main>
+    <main>
+        <section>
+            <span id="titulo">
+            <h1>REGISTRARME</h1>
+            </span>
+            <form id= "register" action="/register" method="post">
+                <label for="name"></label>
+                <input class="register"
+                    required
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="nombre"
+                />
+                <label for="surname"></label>
+                <input class="register"
+                    required
+                    id="surname"
+                    type="text"
+                    name="surname"
+                    placeholder="apellido"
+                />
+                <label for="email"></label>
+                <input class="register"
+                    required
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="email"
+                />
+                <label for="password"></label>
+                <input class="register"
+                    required
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="password"
+                />
+                <label for="confirmPassword"></label>
+                <input class="register"
+                    required
+                    id="confirmPassword"
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="confirmar contraseña"
+                />
+                <label id="dob" for="dob">Si vos querés, celebramos tu dia!</label>
+                <input class="register"
+                    id="dob"
+                    type="date"
+                    name="dob"
+                    placeholder="fecha de nacimiento"
+                />
+                <div class="termsCheck">
+                    <input
+                        required
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                    />
+                    <span>
+                    <a class="termsCheck" href="/terms">Acepto los términos y condiciones</a>
+                    </span>  
+                    </div>
+                <button id="enviar" type="submit">ENVIAR</button>
+            </form>
+        </section>
+    </main>
 
     <%- include ('../partials/footer.ejs') %>
 

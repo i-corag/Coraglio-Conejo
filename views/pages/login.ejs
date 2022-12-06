@@ -18,7 +18,34 @@
 
     <%- include ('../partials/header.ejs') %>
 
-    <main></main>
+    <main>
+        <h1>INICIAR SESION</h1>
+        <form action="/login" method="post">
+            <label for="email"></label>
+            <input
+                required
+                id="email"
+                type="email"
+                name="email"
+                placeholder="email"
+            />
+            <label for="password"></label>
+            <input
+                required
+                id="password"
+                type="password"
+                name="password"
+                placeholder="password"
+            />
+            <button type="submit">INGRESAR</button>
+        </form>
+        <span>
+            <a href="/resetPassword">Olvide mi contraseña</a>
+        </span>
+        <span>
+            <a href="/register">Registrarme</a>
+        </span>
+    </main>
 
     <%- include ('../partials/footer.ejs') %>
 

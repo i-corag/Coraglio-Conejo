@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/974a6748c3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../css/index.css" />
     <link rel="stylesheet" href="../../../css/header.css" />
-    <link rel="stylesheet" href="../../../css/main.css" />
+    <link rel="stylesheet" href="../../../css/home.css" />
     <link rel="stylesheet" href="../../../css/footer.css" />
 </head>
 
@@ -33,7 +33,7 @@
                 <li>
                     <img src= "<%= product.imagen %>" />
                     <h3> <%= product.titulo %> </h3>
-                    <a href="/products/<%= product.id %>"> VER </a>
+                    <a href="/product/<%= product.id %>"> VER </a>
                 </li>
                 <% }); %>
             </ul>
