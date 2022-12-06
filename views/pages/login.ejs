@@ -19,32 +19,37 @@
     <%- include ('../partials/header.ejs') %>
 
     <main>
-        <h1>INICIAR SESION</h1>
-        <form action="/login" method="post">
-            <label for="email"></label>
-            <input
-                required
-                id="email"
-                type="email"
-                name="email"
-                placeholder="email"
-            />
-            <label for="password"></label>
-            <input
-                required
-                id="password"
-                type="password"
-                name="password"
-                placeholder="password"
-            />
-            <button type="submit">INGRESAR</button>
-        </form>
-        <span>
-            <a href="/resetPassword">Olvide mi contraseña</a>
-        </span>
-        <span>
-            <a href="/register">Registrarme</a>
-        </span>
+        <section>
+            <span id="titulo">
+                <h1>INICIAR SESION</h1>
+            </span>
+            <div id="form">
+                <form id="login" action="/login" method="post">
+                    <label for="email"></label>
+                    <input class="login"
+                    required
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="email"
+                    />
+                    <label for="password"></label>
+                    <input class="login"
+                    required
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="password"
+                    />
+                    <button id="ingresar" type="submit">INGRESAR</button>
+                </form>
+                <span id="loginEnlace">
+                    <a class="loginEnlace" href="/resetPassword">Olvide mi contraseña</a>
+                    <a class="loginEnlace" href="/register">Registrarme</a>
+                </span>
+            </div>
+        </section>
+
     </main>
 
     <%- include ('../partials/footer.ejs') %>
