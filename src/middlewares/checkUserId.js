@@ -1,6 +1,6 @@
 
 
-const checkUserNotRegistered = (req, res, next) => {
+const checkUserNotLogged = (req, res, next) => {
     const { userId } = req.session;
   
     if (userId) {
@@ -8,5 +8,17 @@ const checkUserNotRegistered = (req, res, next) => {
     }
     next();
   };
+
+
+  const checkUserLogged = (req, res, next) => {
+    const { userId } = req.session;
+
+    if (!userId) {
+      return res.redirect("/login");
+    }
+    next();
+  };
   
-  module.exports = { checkUserNotRegistered };
+  module.exports = { checkUserNotLogged , checkUserLogged };
+
+

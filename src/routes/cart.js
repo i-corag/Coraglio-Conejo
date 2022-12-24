@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 
-router.get ("/", (req,res) => {
+router.get ("/cart", (req,res) => {
     return res.status(200).render("pages/cart.ejs");
 });
 

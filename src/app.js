@@ -2,43 +2,42 @@ require("dotenv").config();
 const path = require("path");
 
 const express = require("express");
-const bodyParser = require("body-parser");
+const bodyParser = require("body-parser"); 
 const session = require("express-session");
 const cookieParser = require("cookie-parser"); 
 
-const oneDay = 1000 * 60 * 60 * 24;
+const maxAge = 1000 * 60 * 15; //en miliseconds
 
 const app = express(); 
 
-// Procedemos con las configuraciones de nuestro app
-// Manejo de req.body en formato JSON
-app.use(bodyParser.urlencoded({ extended: true }));
+// Configuraciones de nuestro app
 
-app.use(express.static(path.join(__dirname, "../public")));
-app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true })); // Manejo de req.body en formato JSON
 
-app.use(
-    session({
+app.use(express.static(path.join(__dirname, "../public"))); // Acceso a la carpeta public
+
+app.set("view engine", "ejs"); // Setear ejs como motor de vistas
+
+app.use(session({ 
       saveUninitialized: true,
       secret: process.env.SESSION_SECRET,
-      cookie: { maxAge: oneDay },
-      resave: false,
+      cookie: { maxAge: maxAge },
+      resave: true,
     })
   );
-  app.use(cookieParser());
+
+app.use(cookieParser());
 
 const homeRoutes = require('./routes/home.js'); 
 const productRoutes = require('./routes/product.js'); 
-//const loginRoutes = require('./routes/login.js'); 
 const authRoutes = require('./routes/auth.js'); 
 const cartRoutes = require('./routes/cart.js'); 
 
 
 app.use("/",homeRoutes);
-app.use("/product",productRoutes);
-//app.use("/login",loginRoutes);
+app.use("/products",productRoutes);
 app.use("/",authRoutes);
-app.use("/cart",cartRoutes);
+app.use("/",cartRoutes);
  
 
 

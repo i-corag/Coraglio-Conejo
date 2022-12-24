@@ -4,25 +4,26 @@ const router = Router();
 const {
     sendRegisterForm,
     getRegisterData,
+    sendLoginForm,
+    getLoginData,
+    logOut,
   } = require("../controllers/authControllers");
 
 const {
-    checkUserNotRegistered,
+    checkUserNotLogged, checkUserLogged
   } = require("../middlewares/checkUserId");
 
 
 
-router.get ("/register", [checkUserNotRegistered] , sendRegisterForm);
+router.get ("/register", [checkUserNotLogged] , sendRegisterForm);
 
 router.post ("/register", getRegisterData );
 
+router.get ("/login", [checkUserNotLogged] , sendLoginForm);
 
-/*router.get ("/login", (req,res) => {
-    return res.status(200).render("pages/login.ejs");
-});
+router.post ("/login", getLoginData );
 
-router.get ("/logOut",);
-*/
+router.get ("/logout", [checkUserLogged] , logOut);
 
 module.exports = router;
 

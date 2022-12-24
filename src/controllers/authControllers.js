@@ -2,10 +2,11 @@ const fs = require('fs');
 const path = require("path");
 const bcrypt = require("bcrypt");
 const crypto = require("crypto");
+const { request } = require('http');
 
 
 const sendRegisterForm = (req, res) => {
-    res.render("pages/register.ejs");
+  res.render("pages/register.ejs");
 };
 
 const getRegisterData = (req, res) => {
@@ -18,7 +19,7 @@ const getRegisterData = (req, res) => {
     // Verificar si ya existe el usuario
     const existedUser = parsedUsersFile.some((current) => current.email === email);
     if (existedUser) {
-        return res.render("pages/invalid.ejs");
+        return res.render("pages/existedUser.ejs");
     }
   
     // Generate a salt and hash on separate function calls y reescribimos el .json
@@ -31,7 +32,6 @@ const getRegisterData = (req, res) => {
           password: hash,
         };
         req.session.userId = id;
-        req.session.save();
   
         fs.writeFileSync (
           path.join(__dirname, "../models/users.json"),
@@ -43,7 +43,48 @@ const getRegisterData = (req, res) => {
     res.redirect("pages/login.ejs");
 };
 
+const sendLoginForm = (req, res) => {
+  res.render("pages/login.ejs");
+};
+
+const getLoginData = (req, res) => {
+  const { email, password } = req.body; //obtenemos los datos del formulario de login
+
+  //leemos y parseamos el json con todos los usuarios
+  let parsedUsersFile = JSON.parse (fs.readFileSync (path.join(__dirname, "../models/users.json")));
+
+  //buscamos si el usuario ingresado existe
+  const existedUser = parsedUsersFile.find (user => user.email === email);
+
+  //si no existe retornamos invalido
+  if (!existedUser) {
+    return res.render ("pages/unexistedUser.ejs");
+  }
+
+  //comparamos las contraseñas
+  const validPassword = bcrypt.compareSync (password , existedUser.password);
+
+  //si las contraseñas no coinciden
+  if (!validPassword) {
+    return res.render ("pages/unexistedUser.ejs");
+  }
+
+  req.session.userId = existedUser.id;
+
+  //si todo salio ok redireccionamos a home
+  res.redirect ("/");
+
+};
+
+const logOut = (req, res) => {
+  req.session.destroy();
+  res.redirect ("/login");
+};
+
 module.exports = {
     sendRegisterForm,
     getRegisterData,
+    sendLoginForm,
+    getLoginData,
+    logOut,
   };

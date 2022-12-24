@@ -1,0 +1,35 @@
+main {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--third-color);
+    font-weight: lighter;
+    font-size: small;
+}
+
+.ingresar {
+    color: var(--third-color);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.volver {
+    color: var(--third-color);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+ /* TABLET */
+@media (min-width: 768px){
+    main {
+        font-size: large;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {    
+    main {
+        font-size: x-large;
+    }
+}
